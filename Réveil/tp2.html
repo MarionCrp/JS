@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+				    <!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+			
+	   	<script type="text/javascript" src="horloge.js"></script>
+	</head>
+
+	<body>
+
+	<div class="panel panel-default">
+		  <div class="panel-heading">
+		  	<h1 id="time"></h1>
+		  </div>
+		  <div class="panel-body">
+			<div id="tab">
+				<div id="reveil_1" class="reveil">
+					<form class="form-inline">
+					  <select class="form-control heure"></select> 
+					  <select class="form-control minutes"></select>
+						<div class="form-group">
+					    <label class="sr-only" for=""></label>
+					    <input type="text" class="form-control" placeholder="Titre du Réveil" name="libelle_reveil">
+					  </div>
+					  <select class="form-control son">
+					  	<option>Alarme 1</option>
+					  	<option>Alarme 2</option> 
+					  	<option>Compte à Rebours</option>
+					  	<option>Coq</option>
+					  	<option>Chèvre</option> 
+					  	<option>Chat</option>
+					  </select>
+					  <audio controls style="display:none;"><source src="alarm_sounds/alarm1.mp3" type="audio/mpeg"></audio>
+					  <audio controls style="display:none;"><source src="alarm_sounds/alarm2.mp3" type="audio/mpeg"></audio>
+					  <audio controls style="display:none;"><source src="alarm_sounds/Countdown.mp3" type="audio/mpeg"></audio>
+					  <audio controls style="display:none;"><source src="alarm_sounds/rooster.mp3" type="audio/mpeg"></audio>
+					  <audio controls style="display:none;"><source src="alarm_sounds/Goat.mp3" type="audio/mpeg"></audio>
+					  <audio controls style="display:none;"><source src="alarm_sounds/Meow.mp3" type="audio/mpeg"></audio>
+					  <label class="btn btn-danger">
+					    <input type="checkbox" autocomplete="off" class="checked"> Désactivé
+					  </label>
+					  <span class="btn btn-default" id="bouton_suppression"> Supprimer </span>
+
+					</form>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-default" id="bouton_ajout"> Ajouter </button>
+		  </div>
+	</div>
+</body>
+
+</html>
